@@ -3,238 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Julian | Trang Chủ Cá Nhân</title>
+    <title>David Julian</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts & Font Awesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
 
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80 transition-all">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                David Julian
-            </a>
-            <nav class="flex items-center">
-                <a href="#" class="px-5 py-2 text-sm font-semibold text-slate-100 bg-indigo-600 hover:bg-indigo-500 rounded-full transition-all shadow-md shadow-indigo-600/30">
-                    Home
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo & Brand -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="https://sf-static.upanhlaylink.com/img/image_202608129c7cc19f3d10ff590ed14fbc663f952d.jpg" 
+                         alt="Avatar" 
+                         class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover ring-2 ring-indigo-600/20 group-hover:ring-indigo-600 transition duration-300">
+                    <div class="flex flex-col">
+                        <span class="font-bold text-slate-900 text-base sm:text-lg group-hover:text-indigo-600 transition">Góc Nhỏ Cá Nhân</span>
+                        <span class="text-xs text-slate-500 font-medium">Personal Blog & Lifestyle</span>
+                    </div>
                 </a>
-            </nav>
+
+                <!-- Navigation Menu -->
+                <nav class="flex items-center gap-1 sm:gap-6">
+                    <a href="#" class="px-3 py-2 rounded-lg text-sm font-semibold text-indigo-600 bg-indigo-50/80 hover:bg-indigo-100/80 transition">
+                        <i class="fa-solid fa-house mr-1.5"></i>Trang Home
+                    </a>
+                    <a href="#blog" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-slate-100 transition hidden sm:inline-block">
+                        Bài viết
+                    </a>
+                    <a href="#about" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-slate-100 transition hidden sm:inline-block">
+                        Góc chia sẻ
+                    </a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-8">
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         
-        <!-- Hero Section: Banner & Avatar -->
-        <section class="relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800/80 shadow-2xl">
-            <!-- Banner Image -->
-            <div class="h-48 sm:h-64 md:h-80 w-full relative overflow-hidden bg-slate-800">
-                <img src="https://sf-static.upanhlaylink.com/img/image_20260812ac658a2c02e39cdeccfb8d56dba02544.jpg" 
-                     alt="David Julian Banner" 
-                     class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent"></div>
-            </div>
-
-            <!-- Profile Overview Header -->
-            <div class="px-6 sm:px-8 pb-8 pt-0 relative">
-                <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between -mt-16 sm:-mt-20 gap-4 mb-6">
-                    <!-- Avatar -->
-                    <div class="relative group inline-block">
-                        <img src="https://sf-static.upanhlaylink.com/img/image_202608129c7cc19f3d10ff590ed14fbc663f952d.jpg" 
-                             alt="David Julian Avatar" 
-                             class="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl object-cover ring-4 ring-slate-900 shadow-2xl bg-slate-800">
-                        <span class="absolute bottom-2 right-2 w-4 h-4 bg-emerald-500 ring-4 ring-slate-900 rounded-full" title="Online"></span>
-                    </div>
-
-                    <!-- Quick Info Badges -->
-                    <div class="flex flex-wrap gap-2 text-xs font-semibold">
-                        <span class="px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex items-center gap-1.5">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            Thứ 7 • 16:10
-                        </span>
-                        <span class="px-3 py-1.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center gap-1.5">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            XSHG Fan
-                        </span>
-                    </div>
-                </div>
-
-                <!-- User Title -->
-                <div>
-                    <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">David Julian</h1>
-                    <p class="text-sm text-slate-400 mt-1">Góc nhỏ cá nhân & Chia sẻ khoảnh khắc thư giãn cuối tuần</p>
+        <!-- Banner Hero Section -->
+        <div class="relative w-full h-56 sm:h-80 md:h-96 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg mb-8 sm:mb-12 group">
+            <img src="https://sf-static.upanhlaylink.com/img/image_20260812ac658a2c02e39cdeccfb8d56dba02544.jpg" 
+                 alt="Banner" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent flex items-end">
+                <div class="p-6 sm:p-10 text-white max-w-3xl">
+                    <span class="px-3 py-1 bg-indigo-600/90 backdrop-blur-md text-xs font-bold uppercase tracking-wider rounded-full mb-3 inline-block">
+                        Góc Nhỏ Thói Quen
+                    </span>
+                    <h1 class="text-2xl sm:text-4xl font-extrabold leading-tight text-white drop-shadow-sm">
+                        Thói Quen Chiều Chủ Nhật & Trải Nghiệm Dò Kết Quả Trực Tuyến
+                    </h1>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Profile Main Content Grid -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Grid Layout: Main Article & Sidebar -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             
-            <!-- Sidebar / Personal Info -->
-            <div class="md:col-span-1 space-y-6">
-                <div class="bg-slate-900/90 border border-slate-800/80 rounded-2xl p-6 shadow-lg">
-                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
-                        Thông tin thói quen
-                    </h2>
-                    <ul class="space-y-4 text-sm text-slate-300">
-                        <li class="flex items-center gap-3">
-                            <div class="p-2.5 rounded-xl bg-slate-800/80 text-indigo-400">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <div>
-                                <p class="text-xs text-slate-400">Sở thích</p>
-                                <p class="font-medium text-slate-200">Xem trực tiếp XSHG</p>
-                            </div>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="p-2.5 rounded-xl bg-slate-800/80 text-indigo-400">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <div>
-                                <p class="text-xs text-slate-400">Khung giờ cố định</p>
-                                <p class="font-medium text-slate-200">16:10 Chiều Thứ 7</p>
-                            </div>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="p-2.5 rounded-xl bg-slate-800/80 text-indigo-400">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                            </div>
-                            <div>
-                                <p class="text-xs text-slate-400">Trang tra cứu tin cậy</p>
-                                <p class="font-medium text-indigo-400">Xổ số Thiên Phú</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Main Bio Intro Story -->
-            <div class="md:col-span-2 space-y-6">
-                <div class="bg-slate-900/90 border border-slate-800/80 rounded-2xl p-6 sm:p-8 shadow-lg space-y-5 leading-relaxed text-slate-300">
-                    <div class="border-b border-slate-800 pb-4">
-                        <h2 class="text-xl font-bold text-white flex items-center gap-2">
-                            Lời chào từ David Julian 👋
-                        </h2>
+            <!-- Left Column: Main Article Content (8 Cols) -->
+            <article class="lg:col-span-8 bg-white rounded-2xl p-6 sm:p-10 border border-slate-200/80 shadow-sm">
+                
+                <!-- Author Header -->
+                <div class="flex items-center gap-4 pb-6 mb-8 border-b border-slate-100">
+                    <img src="https://sf-static.upanhlaylink.com/img/image_202608129c7cc19f3d10ff590ed14fbc663f952d.jpg" 
+                         alt="Author" 
+                         class="w-12 h-12 rounded-full object-cover ring-2 ring-indigo-500/20">
+                    <div>
+                        <h3 class="font-bold text-slate-900">Admin Góc Nhỏ</h3>
+                        <p class="text-xs text-slate-500">Đăng ngày: Chủ Nhật | Thời gian đọc: 3 phút</p>
                     </div>
+                </div>
 
-                    <p>
+                <!-- Post Paragraphs -->
+                <div class="space-y-6 text-slate-700 text-base sm:text-lg leading-relaxed">
+                    <p class="font-medium text-slate-900 text-lg sm:text-xl leading-snug">
                         Chào mọi người nha! Rất vui vì anh em đã ghé thăm góc nhỏ cá nhân này của mình.
                     </p>
 
                     <p>
-                        Mấy nay rảnh rỗi ngồi viết vài dòng chào sân để anh em ghé qua biết mình là ai, cũng như chia sẻ chút thói quen nho nhỏ mà mình giữ suốt mấy năm nay. Thú thật với anh em, cuộc sống hằng ngày bận rộn công việc đủ thứ chuyện mệt mỏi, nên nhiều khi cuối tuần mình chỉ thích tìm mấy niềm vui nho nhỏ, đơn giản để giải tỏa căng thẳng thôi. Và một trong những thói quen quen thuộc nhất của mình chính là canh xem trực tiếp <a href="https://xosothienphu.vn/xshg-xo-so-hau-giang-sxhg.html" target="_blank" rel="noopener noreferrer" class="text-indigo-400 font-semibold underline underline-offset-4 decoration-indigo-500/50 hover:text-indigo-300 transition-colors">xổ số đài hậu giang</a> vào mỗi chiều Thứ 7.
+                        Chiều Chủ Nhật nào cũng vậy, sau một tuần làm việc bận rộn thì khoảng thời gian cuối tuần luôn là lúc mình dành trọn vẹn cho bản thân và mấy niềm vui nho nhỏ. Một trong những thói quen quen thuộc giữ suốt mấy năm nay của mình chính là canh xem <a href="https://xosothienphu.vn/xsmn-chu-nhat-cn.html" target="_blank" rel="noopener" class="text-indigo-600 font-bold hover:text-indigo-800 underline decoration-2 underline-offset-4 hover:decoration-indigo-800 transition">kết quả xổ số miền nam chủ nhật</a> vào mỗi buổi chiều.
                     </p>
 
                     <p>
-                        Cứ tầm 16h10 chiều Thứ 7 tuần nào cũng vậy, dù có đang làm gì hay ở đâu thì mình cũng cố gắng sắp xếp xong xuôi công việc, mở điện thoại lên ngồi chờ từng giải thưởng xuất hiện. Anh em nào có cùng thói quen này chắc cũng hiểu cái cảm giác đó mà đúng không? Nó vừa có chút hồi hộp, lại vừa có cái cảm giác hào hứng, vui vui khó tả lắm. Chiều cuối tuần mà tới khung giờ đó mà không mở lên coi trực tiếp là trong người lại thấy bứt rứt, thiêu thiếu một cái gì đó ngay.
+                        Thú thật với anh em, cứ tầm 16h10 chiều Chủ Nhật tuần nào cũng vậy, dù đang ở nhà nghỉ ngơi hay ngồi cà phê với bạn bè thì mình cũng phải mở điện thoại lên hóng từng dải số. Cái cảm giác ngồi chờ từng lồng cầu quay rồi từng con số nhảy ra nó vừa hồi hồi, vừa có chút hào hứng vui vui khó tả lắm. Chiều Chủ Nhật nào mà bận việc không coi trực tiếp được là trong người lại thấy thiếu thiếu, ngứa ngáy ngay.
                     </p>
 
-                    <p>
-                        Nói về chuyện dò số thì ngày xưa mình cũng chầy chật lắm. Lúc mới bắt đầu chơi với hóng kết quả, mình toàn bấm đại vào mấy trang hiển thị trên mạng. Nhiều khi trúng mấy trang web tải chậm rì, bấm vô quay vòng vòng mãi không chịu nhảy số. Đã vậy có hôm bận việc không coi trực tiếp được, tối muộn mở điện thoại lên tính tìm lại kết quả <a href="https://xosothienphu.vn/xsla-xo-so-long-an-sxla.html" target="_blank" rel="noopener noreferrer" class="text-indigo-400 font-semibold underline underline-offset-4 decoration-indigo-500/50 hover:text-indigo-300 transition-colors">xổ số long an tuần rồi</a> hay mấy đài cùng quay hôm đó để kiểm tra lại, mà gặp đúng mấy trang trình bày rườm rà, con số thì nhỏ tí tẹo nhìn muốn hoa cả mắt, lại còn hay báo sai số nữa chứ. Thành ra nhiều lúc đang vui mà lại bực cả mình.
-                    </p>
-
-                    <p>
-                        May sao sau này được một người bạn quen lâu năm giới thiệu cho bên Xổ số Thiên Phú, thế là mình dính luôn ở đó tới tận bây giờ. Phải công nhận là dò bên Thiên Phú nó khác biệt hẳn. Cái mình thích nhất ở đây là tốc độ cập nhật siêu nhanh và chuẩn đét. HĐXS vừa quay ra quả bóng nào là trên màn hình hiện ngay con số đó theo thời gian thực, nhanh từng giây luôn chứ không có kiểu bị trễ hay lag giật gì cả.
-                    </p>
-
-                    <p>
-                        Ngoài ra, giao diện bên Thiên Phú làm rất sạch sẽ, con số to rõ ràng nên dù nhìn trên điện thoại hay mở máy tính xem cũng đều rất mượt mà và mướt mắt. Mấy người lớn tuổi hay người không rành công nghệ nhìn vào cũng thấy dễ chịu ngay. Nhờ vậy mà chiều Thứ 7 nào tầm 16h10 mình cũng có một chỗ quen thuộc, uy tín để an tâm hóng kết quả XSHG trực tiếp mà không phải lo nghĩ chuyện bị chậm hay sai lệch số liệu.
-                    </p>
-
-                    <p>
-                        Góc nhỏ này mình tạo ra chủ yếu để kết nối và giao lưu với những anh em có cùng sở thích. Chiều Thứ 7 tầm 16h10 rảnh rỗi, anh em cứ ghé qua Xổ số Thiên Phú hóng kết quả XSHG cùng mình cho xôm nhé!
-                    </p>
-
-                    <!-- CTA Banner -->
-                    <div class="mt-6 p-5 rounded-2xl bg-gradient-to-r from-indigo-950/70 via-purple-950/50 to-slate-900 border border-indigo-800/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl">
-                        <div>
-                            <h3 class="text-base font-bold text-white">Hóng kết quả cùng David Julian</h3>
-                            <p class="text-xs text-slate-400 mt-1">Theo dõi trực tiếp kết quả XS chuẩn xác từng giây tại Xổ số Thiên Phú!</p>
-                        </div>
-                        <a href="https://xosothienphu.vn" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold rounded-xl transition-all whitespace-nowrap shadow-lg shadow-indigo-600/30">
-                            Xem Ngay
-                        </a>
+                    <!-- Highlight Quote Box -->
+                    <div class="p-5 sm:p-6 my-6 bg-slate-50 border-l-4 border-indigo-600 rounded-r-2xl">
+                        <p class="text-slate-800 italic font-medium">
+                            "Mấy thời gian đầu lúc mới tập tành coi, mình cũng chầy chật tìm chỗ xem lắm. Chuyển qua chuyển lại mấy trang mạng mà trang thì giật lag, trang thì số hiện chậm rì..."
+                        </p>
                     </div>
+
+                    <p>
+                        Đã vậy có hôm bận việc không canh xem trực tiếp được, tối về mở điện thoại lên tính tìm lại <a href="https://xosothienphu.vn/xsmn-xo-so-mien-nam-sxmn.html" target="_blank" rel="noopener" class="text-indigo-600 font-bold hover:text-indigo-800 underline decoration-2 underline-offset-4 hover:decoration-indigo-800 transition">xskt miền nam</a> để kiểm tra lại mà gặp đúng mấy trang trình bày rối mắt, con số thì nhỏ tí tẹo nhìn muốn hoa cả mắt, lại còn hay báo sai số nữa chứ.
+                    </p>
+
+                    <p>
+                        Sau này may mắn được ông anh giới thiệu cho bên <strong>Xổ số Thiên Phú</strong> thì mình mê luôn tới tận bây giờ. Dò trên Thiên Phú thích nhất ở chỗ là cập nhật siêu nhanh và chuẩn đét. Hội đồng mở thưởng tới đâu là kết quả các đài Chủ Nhật hiện lên ngay tới đó theo thời gian thực, nhanh từng giây luôn chứ không có kiểu bị trễ hay lag giật gì cả.
+                    </p>
+
+                    <p>
+                        Giao diện bên Thiên Phú cũng được trình bày rất sạch sẽ, con số to rõ dễ nhìn nên xem trên điện thoại hay máy tính gì cũng mượt mà, tiện lợi cực kỳ. Chiều Chủ Nhật tầm 16h10 rảnh rỗi, anh em cứ ghé Xổ số Thiên Phú hóng kết quả trực tiếp cùng mình cho xôm nhé!
+                    </p>
                 </div>
-            </div>
 
-        </section>
-
-        <!-- Feature Blog Section -->
-        <section class="space-y-4">
-            <div class="flex items-center justify-between">
-                <h2 class="text-lg font-bold text-white flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span>
-                    Featured Blog Post
-                </h2>
-            </div>
-
-            <article class="bg-slate-900/90 border border-slate-800/80 rounded-2xl overflow-hidden shadow-xl hover:border-slate-700 transition-all duration-300 group">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-0">
-                    <!-- Thumbnail 16:9 -->
-                    <div class="md:col-span-5 relative aspect-video overflow-hidden bg-slate-800">
-                        <img src="https://sf-static.upanhlaylink.com/img/image_20260819b5c94bd646031bba3f06aca54abbdea4.jpg" 
-                             alt="Feature Blog Thumbnail" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <!-- Content -->
-                    <div class="md:col-span-7 p-6 flex flex-col justify-between space-y-4">
-                        <div class="space-y-2">
-                            <div class="flex items-center gap-2 text-xs text-indigo-400 font-semibold">
-                                <span class="px-2.5 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20">Xổ Số & Trải Nghiệm</span>
-                                <span>•</span>
-                                <time class="text-slate-400">19/08/2026</time>
-                            </div>
-                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors leading-snug">
-                                Trải Nghiệm Dò Kết Quả XSHG Trực Tiếp Chuẩn Xác & Nhanh Nhất Mỗi Chiều Thứ 7
-                            </h3>
-                            <p class="text-sm text-slate-400 line-clamp-3 leading-relaxed">
-                                Chia sẻ kinh nghiệm cá nhân khi theo dõi trực tiếp kết quả xổ số Hậu Giang vào khung giờ 16:10 cuối tuần, phương pháp chọn trang tra cứu tốc độ cao, không giật lag và hiển thị giao diện mượt mà trên di động.
-                            </p>
-                        </div>
-                        <div class="pt-2">
-                            <a href="https://xosothienphu.vn/xshg-xo-so-hau-giang-sxhg.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-400 hover:text-indigo-300 transition-colors">
-                                Đọc chi tiết bài viết
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </article>
-        </section>
+
+            <!-- Right Column: Sidebar & Featured Blog (4 Cols) -->
+            <aside class="lg:col-span-4 space-y-8">
+                
+                <!-- Feature Blog Section -->
+                <div id="blog" class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm">
+                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+                        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <i class="fa-solid fa-fire text-amber-500"></i> Bài Viết Nổi Bật
+                        </h2>
+                    </div>
+
+                    <!-- Blog Card -->
+                    <div class="group cursor-pointer">
+                        <!-- Thumbnail 16:9 Aspect Ratio -->
+                        <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-slate-100">
+                            <img src="https://sf-static.upanhlaylink.com/img/image_20260819b5c94bd646031bba3f06aca54abbdea4.jpg" 
+                                 alt="Feature Blog Thumbnail" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        
+                        <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md inline-block mb-2">
+                            Kinh Nghiệm Tra Cứu
+                        </span>
+                        
+                        <h3 class="font-bold text-slate-900 text-base group-hover:text-indigo-600 transition line-clamp-2 leading-snug">
+                            Bí Quyết Theo Dõi Kết Quả Xổ Số Trực Tuyến Nhanh Và Chính Xác Nhất
+                        </h3>
+                        
+                        <p class="text-xs text-slate-500 mt-2 line-clamp-2">
+                            Tổng hợp những tiêu chí quan trọng giúp bạn lựa chọn nền tảng tra cứu KQXS không lo giật lag hay sai lệch số liệu.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Author Profile Card Widget -->
+                <div id="about" class="bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-2xl p-6 shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://sf-static.upanhlaylink.com/img/image_202608129c7cc19f3d10ff590ed14fbc663f952d.jpg" 
+                             alt="Avatar" 
+                             class="w-14 h-14 rounded-full object-cover border-2 border-indigo-400">
+                        <div>
+                            <h4 class="font-bold text-base">Về Bản Thân</h4>
+                            <p class="text-xs text-indigo-200">Blogger & Người yêu thích công nghệ</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Cảm ơn anh em đã ghé thăm trang web cá nhân. Nơi lưu giữ những thói quen, góc nhìn và trải nghiệm đời sống thường ngày!
+                    </p>
+                </div>
+
+            </aside>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-800/80 bg-slate-950/80 py-8 text-slate-400 mt-12">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-xs text-slate-500">&copy; 2026 MichaelRyan Profile. All rights reserved.</p>
+    <footer class="bg-slate-900 text-slate-400 mt-auto border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <!-- Left: Branding -->
+                <div class="flex items-center gap-3 text-center md:text-left">
+                    <img src="https://sf-static.upanhlaylink.com/img/image_202608129c7cc19f3d10ff590ed14fbc663f952d.jpg" 
+                         alt="Logo Footer" 
+                         class="w-10 h-10 rounded-full object-cover">
+                    <div>
+                        <span class="block text-white font-bold text-base">Góc Nhỏ Cá Nhân</span>
+                        <span class="block text-xs text-slate-500">© 2026 All rights reserved.</span>
+                    </div>
+                </div>
 
-            <!-- Social Links -->
-            <div class="flex items-center space-x-4">
-                <!-- GitHub -->
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all" title="GitHub">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-                <!-- GitLab -->
-                <a href="https://gitlab.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all" title="GitLab">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 01-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 015.5 2a.43.43 0 01.39.26l2.1 6.49h8.02l2.1-6.49A.43.43 0 0118.5 2a.42.42 0 01.39.18l2.44 7.51 1.22 3.78a.84.84 0 01-.3.92z"/></svg>
-                </a>
-                <!-- Pinterest -->
-                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all" title="Pinterest">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
-                </a>
-                <!-- X (Twitter) -->
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all" title="X (Twitter)">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
+                <!-- Right: Social Links (GitHub, GitLab, Pinterest, X) -->
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" 
+                       class="w-10 h-10 rounded-full bg-slate-800 hover:bg-indigo-600 hover:text-white flex items-center justify-center transition duration-300 text-lg">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://gitlab.com" target="_blank" rel="noopener" aria-label="GitLab" 
+                       class="w-10 h-10 rounded-full bg-slate-800 hover:bg-orange-600 hover:text-white flex items-center justify-center transition duration-300 text-lg">
+                        <i class="fa-brands fa-gitlab"></i>
+                    </a>
+                    <a href="https://pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest" 
+                       class="w-10 h-10 rounded-full bg-slate-800 hover:bg-red-600 hover:text-white flex items-center justify-center transition duration-300 text-lg">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                    <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)" 
+                       class="w-10 h-10 rounded-full bg-slate-800 hover:bg-slate-700 hover:text-white flex items-center justify-center transition duration-300 text-lg">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+
             </div>
         </div>
     </footer>
